@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { Robot } from '../../models/robot';
 
 export function RobotItem({ item }: { item: Robot }) {
