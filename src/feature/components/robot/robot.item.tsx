@@ -6,20 +6,20 @@ import style from './robot.item.module.css';
 export function RobotItem({ item }: { item: Robot }) {
     const { handlerEraser } = useContext(RobotsContext);
 
-    const handleClick = () => {
-        handlerEraser(item.id);
-    };
-
     return (
         <li className={style.host}>
             <span>{item.name}</span>
             <img src={'https://robohash.org/' + item.id} alt="a blue robot" />
-            <span>{item.resistance}</span>
-            <span>{item.speed}</span>
-            <span>{item.creatingDate}</span>
-            <span className="button" onClick={handleClick}>
+            <span>Resistance: {item.resistance}</span>
+            <span>Speed: {item.speed}</span>
+            <span>Made on {item.creatingDate}</span>
+            <button
+                onClick={() => {
+                    handlerEraser(item.id);
+                }}
+            >
                 🗑️
-            </span>
+            </button>
         </li>
     );
 }
