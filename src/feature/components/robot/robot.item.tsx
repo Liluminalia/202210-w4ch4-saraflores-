@@ -1,4 +1,5 @@
 import { Robot } from '../../models/robot';
+import style from './robot.item.module.css';
 
 export function RobotItem({ item }: { item: Robot }) {
     // codigo comentado xq aun no funciona
@@ -13,7 +14,7 @@ export function RobotItem({ item }: { item: Robot }) {
     // };
 
     return (
-        <li>
+        <li className={style.host}>
             <span>{item.name}</span>
             <img src={'https://robohash.org/' + item.id} alt="a blue robot" />
             <span>{item.resistance}</span>
