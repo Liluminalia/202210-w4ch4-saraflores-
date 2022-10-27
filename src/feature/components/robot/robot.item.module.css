@@ -1,14 +1,16 @@
 .host {
     display: flex;
+    justify-content: column;
 }
 li {
-    flex-direction: row;
-    justify-content: center;
-    border: 1px rgb(129, 217, 252) solid;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 400px;
+    align-items: center;
 }
 li span {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.5rem;
 }
