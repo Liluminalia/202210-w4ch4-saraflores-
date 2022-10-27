@@ -4,8 +4,6 @@ import { RobotItem } from '../robot/robot.item';
 
 export function RobotsList() {
     const title = 'List of Robots';
-    //comentado de momento
-    // const { robots } = useContext(TodoContext);
 
     return (
         <section>

@@ -1,17 +1,14 @@
+import { useContext } from 'react';
+import { RobotsContext } from '../../../infrastructure/context/context';
 import { Robot } from '../../models/robot';
 import style from './robot.item.module.css';
 
 export function RobotItem({ item }: { item: Robot }) {
-    // codigo comentado xq aun no funciona
-    //  const { handlerEraser, handlerComplete } = useContext(TodoContext);
+    const { handlerEraser } = useContext(RobotsContext);
 
-    // const handleClick = () => {
-    //     handlerEraser(item.id);
-    // };
-
-    // const handleChange = () => {
-    //     handlerComplete(item);
-    // };
+    const handleClick = () => {
+        handlerEraser(item.id);
+    };
 
     return (
         <li className={style.host}>
@@ -20,11 +17,9 @@ export function RobotItem({ item }: { item: Robot }) {
             <span>{item.resistance}</span>
             <span>{item.speed}</span>
             <span>{item.creatingDate}</span>
-
-            {/* codigo comentado xq aun no funciona
             <span className="button" onClick={handleClick}>
                 🗑️
-            </span> */}
+            </span>
         </li>
     );
 }
